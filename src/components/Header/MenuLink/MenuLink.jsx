@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 import * as S from "./MenuLink.style";
 
 export default function MenuLink({ item }) {
-  const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const pathname = window.location.pathname;
   const pathSegments = pathname.split("/").filter((segment) => segment !== "");
@@ -18,19 +17,9 @@ export default function MenuLink({ item }) {
 
   return (
     <S.Container active={isActiveMenu()}>
-      <S.Link>
-        <a
-          className="nav-link active"
-          aria-current="page"
-          href="#"
-          onClick={() => {
-            if (item.pages) setOpen(!open);
-            else navigate(item.route);
-          }}
-        >
-          <p>{item.menuName}</p>
-        </a>
-      </S.Link>
+      <Link className="nav-link active" to={item.route}>
+        <p>{item.menuName}</p>
+      </Link>
     </S.Container>
   );
 }
