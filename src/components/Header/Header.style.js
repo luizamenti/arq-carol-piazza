@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.nav`
   background-color: ${({ theme }) => theme.colors.terracota};
-  padding: 0.5rem 3rem 0 3rem;
+  padding: 0.5rem 8rem 0 8rem;
+
+  p {
+    color: ${({ theme }) => theme.colors.ivory};
+  }
 `;
 
 export const LogoLink = styled(Link)`
@@ -24,4 +28,21 @@ export const MenuList = styled.ul`
   gap: 90px;
 `;
 
-export const BotaoWhats = styled.div``;
+export const BotaoWhats = styled.div`
+  width: 30px;
+`;
+
+export const WhatsImage = styled.img`
+  width: 25px;
+`;
+
+export const ContactButton = styled.button`
+  border: ${({ theme }) => `1.5px solid ${theme.colors.ivory}`};
+  border-radius: 2px;
+  background-color: unset;
+  padding: 6px 9px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0.1rem 0 0.4rem 0 !important;
+`;

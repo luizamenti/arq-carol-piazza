@@ -31,9 +31,10 @@ const GlobalStyles = createGlobalStyle`
   
   /* Styles reset */
   * {
-    margin: 0 !important;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none !important;
   }
 
   body {
@@ -44,6 +45,14 @@ const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.fonts.medium};
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 `;
 

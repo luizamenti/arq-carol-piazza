@@ -19,7 +19,7 @@ export default function Header() {
     },
   ];
   return (
-    <S.Container className="navbar navbar-expand-lg">
+    <S.Container className="navbar fixed-top navbar-expand-lg">
       <div className="container-fluid">
         <S.LogoLink className="navbar-brand" to="/">
           <S.Logo src="header-logo.png" />
@@ -42,9 +42,12 @@ export default function Header() {
             ))}
           </S.MenuList>
         </S.LinksMenu>
-        <S.BotaoWhats>
-          <p>botao whats</p>
-        </S.BotaoWhats>
+        <a href="https://wa.me/5551981762251" target="_blank" rel="noreferrer">
+          <S.ContactButton>
+            <p>Contato</p>
+            <S.WhatsImage src="whatsapp-icon.png" />
+          </S.ContactButton>
+        </a>
       </div>
     </S.Container>
   );
