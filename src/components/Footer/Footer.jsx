@@ -5,7 +5,7 @@ import * as S from "./Footer.style";
 export default function Footer() {
   return (
     <S.Container>
-      <S.Logo src="footer-logo.png" />
+      <S.Logo src="footer-logo.png" alt="logo" />
 
       <div>
         <p>Aqui vão as informações de contato</p>

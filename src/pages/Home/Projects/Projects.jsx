@@ -11,7 +11,7 @@ export default function Projects() {
 
       <S.PhotoLink to="/projetos/1">
         <S.PhotoBox>
-          <img src="coverImages/fundo-terracota.png" />
+          <img src="coverImages/fundo-terracota.png" alt="" />
           <span>Nome do Projeto</span>
         </S.PhotoBox>
       </S.PhotoLink>
